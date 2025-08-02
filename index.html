@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youssef Ouass | Fullstack Developer Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom underline animation for nav links */
+    .nav-underline::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(to right, #fb923c, #ec4899);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      transform-origin: left;
+      border-radius: 2px;
+      margin-top: 2px;
+    }
+
+    .nav-underline:hover::after,
+    .nav-underline:focus::after {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Header & Navigation -->
+  <header
+    class="flex justify-between items-center px-8 py-6 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 shadow-2xl sticky top-0 z-50 border-b-2 border-orange-500 relative overflow-hidden">
+    <!-- Decorative Glow -->
+    <div
+      class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-96 h-24 bg-gradient-to-r from-orange-400 via-orange-500 to-pink-500 opacity-20 blur-2xl rounded-full pointer-events-none">
+    </div>
+    <a href="#home"
+      class="flex items-center space-x-3 z-10 relative group focus:outline-none focus:ring-2 focus:ring-orange-400">
+      <span class="text-orange-400 text-3xl font-extrabold tracking-tight drop-shadow-lg animate-bounce">YO</span>
+      <span
+        class="text-2xl font-bold tracking-wide text-white animate-fade-in-up group-hover:text-orange-400 transition-colors duration-200">Youssef
+        Ouass</span>
+    </a>
+    <style>
+      @keyframes fade-in-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fade-in-up 1s 0.2s both;
+      }
+    </style>
+    <nav class="space-x-6 hidden md:flex items-center z-10 relative">
+      <a href="#home"
+        class="nav-underline relative px-2 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Home
+      </a>
+      <a href="#about"
+        class="nav-underline relative px-2 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        About Me
+      </a>
+      <a href="#services"
+        class="nav-underline relative px-2 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Services
+      </a>
+      <a href="#projects"
+        class="nav-underline relative px-2 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Projects
+      </a>
+      <a href="#contact"
+        class="nav-underline relative px-2 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Contact
+      </a>
+    </nav>
+    <a href="project Pic/youssef ouass cv (2).pdf"
+      class="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-400 hover:ring-4 hover:ring-orange-300 z-10 relative"
+      target="_blank" rel="noopener">
+      <i class="fas fa-download mr-2"></i>Download CV
+    </a>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col md:flex-row items-center justify-between px-8 py-16">
+    <div class="md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center">
+      <h2 class="text-lg font-semibold text-gray-400 mb-1 tracking-wide animate-fade-in-down">Hi, I am</h2>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2 drop-shadow-xl animate-fade-in-up">
+        Youssef Ouass
+      </h1>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight animate-fade-in-up">
+        <span class="inline-block bg-gradient-to-r from-orange-500 to-pink-500 text-transparent bg-clip-text">Fullstack
+          Developer</span>
+      </h2>
+      <p class="mb-6 text-gray-300 text-lg leading-relaxed animate-fade-in">
+        I build <span class="font-semibold text-orange-400">modern web applications</span> with clean code and beautiful
+        UI.<br>
+        <span class="inline-block mt-2">Let’s work together to bring your ideas to life!</span>
+      </p>
+      <div class="flex flex-wrap justify-center space-x-4 mt-6">
+        <a href="#projects" class="bg-orange-500 text-white px-6 py-2 rounded-lg font-semibold shadow-lg border-2 border-orange-500
+           transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-orange-600 hover:text-orange-100 
+           focus:outline-none focus:ring-2 focus:ring-orange-400">
+          View Projects
+        </a>
+        <a href="#contact" class="bg-transparent border-2 border-orange-500 text-orange-500 px-6 py-2 rounded-lg font-semibold shadow-md 
+           transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-orange-500 hover:text-white 
+           hover:border-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          Contact Me
+        </a>
+      </div>
+
+    </div>
+    <style>
+      @keyframes gradient-x {
+
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradient-x 4s ease-in-out infinite;
+      }
+
+      @keyframes fade-in-down {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-down {
+        animation: fade-in-down 1s both;
+      }
+
+      @keyframes fade-in-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fade-in-up 1s 0.2s both;
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in 1.2s 0.4s both;
+      }
+    </style>
+    <div class="md:w-1/2 flex flex-col items-center relative">
+      <!-- Profile Picture with Clickable Modal -->
+      <button id="profile-pic-btn" class="focus:outline-none group">
+        <div
+          class="w-48 h-48 rounded-full bg-gradient-to-tr from-orange-400 via-pink-500 to-orange-500 flex items-center justify-center overflow-hidden border-4 border-orange-500 shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
+          <img src="pic.jpg" alt="Youssef Ouass" class="object-cover w-full h-full" />
+        </div>
+        <span class="block mt-2 text-sm text-gray-400 group-hover:text-orange-400 transition-colors duration-200">Click
+          to view gallery</span>
+      </button>
+      <div class="flex space-x-4 mt-4 md:mt-8">
+        <a href="mailto:youssefouass16@gmail.com"
+          class="group relative text-white hover:text-orange-500 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          <span
+            class="absolute -inset-1 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+          <i class="fas fa-envelope group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-300"></i>
+        </a>
+        <a href="https://wa.me/212635858431" target="_blank" rel="noopener"
+          class="group relative text-white hover:text-green-400 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400">
+          <span
+            class="absolute -inset-1 rounded-full bg-gradient-to-tr from-green-400 to-green-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+          <i class="fab fa-whatsapp group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-300"></i>
+        </a>
+        <a href="https://github.com/YoussefOuass"
+          class="group relative text-white hover:text-orange-500 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          <span
+            class="absolute -inset-1 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+          <i class="fab fa-github group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-300"></i>
+        </a>
+        <a href="https://linkedin.com/in/youssef-ouass-675030199" target="_blank" rel="noopener"
+          class="group relative text-white hover:text-orange-500 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          <span
+            class="absolute -inset-1 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+          <i
+            class="fab fa-linkedin-in group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-300"></i>
+        </a>
+      </div>
+      <!-- Modal Gallery -->
+      <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+        <div class="relative bg-gray-900 rounded-xl shadow-2xl p-6 max-w-lg w-full">
+          <button id="close-gallery"
+            class="absolute top-2 right-2 text-gray-400 hover:text-orange-400 text-2xl focus:outline-none">&times;</button>
+          <div class="flex flex-col items-center">
+            <img id="gallery-main-img" src="pic.jpg" alt="Gallery"
+              class="rounded-lg w-72 h-72 object-cover border-4 border-orange-500 shadow-lg mb-4 transition-all duration-300" />
+            <div class="flex space-x-2">
+              <img src="pic.jpg" alt="Thumb 1"
+                class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-orange-400 cursor-pointer hover:scale-105 transition-transform duration-200" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Modal gallery logic
+        const galleryModal = document.getElementById('gallery-modal');
+        const profilePicBtn = document.getElementById('profile-pic-btn');
+        const closeGallery = document.getElementById('close-gallery');
+        const galleryMainImg = document.getElementById('gallery-main-img');
+        const thumbs = document.querySelectorAll('.gallery-thumb');
+
+        profilePicBtn.addEventListener('click', () => {
+          galleryModal.classList.remove('hidden');
+        });
+        closeGallery.addEventListener('click', () => {
+          galleryModal.classList.add('hidden');
+        });
+        galleryModal.addEventListener('click', (e) => {
+          if (e.target === galleryModal) {
+            galleryModal.classList.add('hidden');
+          }
+        });
+        thumbs.forEach(thumb => {
+          thumb.addEventListener('click', () => {
+            galleryMainImg.src = thumb.src;
+            thumbs.forEach(t => t.classList.remove('border-orange-400'));
+            thumb.classList.add('border-orange-400');
+          });
+        });
+      </script>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="px-8 py-16 bg-gray-800 rounded-lg mx-4 my-12 md:my-16">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="mb-6 text-gray-300">
+      I am a dedicated fullstack developer with extensive experience in
+      designing and building scalable web applications using modern
+      technologies. I am committed to delivering high-quality solutions and
+      creating seamless, user-focused digital experiences.
+    </p>
+    <div class="space-y-6" id="skills-bars">
+      <!-- Progress bars will be injected by JS -->
+    </div>
+  </section>
+  <script>
+    // Skills data
+    const skills = [
+      { name: "Frontend", percent: 100 },
+      { name: "Backend", percent: 70 },
+    ];
+
+    const container = document.getElementById("skills-bars");
+    skills.forEach((skill) => {
+      const bar = document.createElement("div");
+      bar.className = "flex items-center mb-2";
+
+      bar.innerHTML = `
+            <span class="w-32">${skill.name}</span>
+            <div class="relative flex-1 mx-4">
+                <div class="h-2 bg-gray-700 rounded-full w-full"></div>
+                <div class="absolute top-0 left-0 h-2 rounded-l-full bg-orange-500" style="width: ${skill.percent}%; box-shadow: 0 0 8px 2px #fb923c;"></div>
+            </div>
+            <span class="w-16 text-orange-400 text-sm font-semibold text-right">${skill.percent}%</span>
+        `;
+      container.appendChild(bar);
+    });
+  </script>
+  <!-- Services Section -->
+  <section id="services" class="px-8 py-16">
+    <h2 class="text-3xl font-bold mb-8 text-center tracking-wide">Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-laptop-code text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">Custom Web Application Development</h3>
+        <p class="text-gray-300 text-sm">
+          Build modern, scalable web apps (admin dashboards, CRMs, e-commerce, booking systems, etc.) Backend logic, API
+          integration, frontend interfaces.
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-globe text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">RESTful API Development & Integration</h3>
+        <p class="text-gray-300 text-sm">
+          Develop secure APIs (Laravel, Node.js) Integrate third-party APIs (payment gateways, shipping APIs, social
+          logins, etc.)
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-mobile-alt text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">Frontend Development</h3>
+        <p class="text-gray-300 text-sm">
+          Responsive design with Tailwind CSS, Bootstrap, Blade, Vue.js, or React. Dynamic and interactive user
+          interfaces.
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-database text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">Database Design & Management</h3>
+        <p class="text-gray-300 text-sm">
+          MySQL, PostgreSQL, MongoDB. Data modeling, migrations, performance optimization.
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-user-shield text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">Authentication & Authorization</h3>
+        <p class="text-gray-300 text-sm">
+          User registration/login systems. Role-based access control (RBAC), token-based auth (JWT).
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-bug text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">Testing & Debugging</h3>
+        <p class="text-gray-300 text-sm">
+          Unit testing, feature testing. Laravel Dusk, PHPUnit.
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-shield-alt text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">Web Security Implementation</h3>
+        <p class="text-gray-300 text-sm">
+          Input validation, protection from SQL injection, CSRF, XSS. HTTPS setup, rate limiting.
+        </p>
+      </div>
+      <div
+        class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl text-center shadow-md hover:scale-105 transform transition duration-300 border-t-4 border-orange-500">
+        <i class="fas fa-tools text-4xl text-orange-500 mb-4 drop-shadow-lg"></i>
+        <h3 class="font-bold text-xl mb-2">Maintenance & Support</h3>
+        <p class="text-gray-300 text-sm">
+          Ongoing updates, bug fixes, feature additions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="px-4 py-20 bg-gray-700 rounded-3xl mx-auto max-w-7xl shadow-xl">
+    <h2 class="text-4xl font-bold mb-14 text-center text-white">Featured Projects</h2>
+    <div class="relative overflow-hidden">
+      <!-- Slider Container -->
+      <div id="projects-slider" class="flex gap-6 transition-transform duration-700 ease-in-out" style="width: 200%;">
+        <!-- Project 1 -->
+        <div
+          class="bg-white p-6 rounded-2xl shadow-lg border border-blue-100 hover:shadow-blue-300 transition duration-300 w-full max-w-sm mx-auto flex-shrink-0">
+          <div class="mb-4 relative">
+            <img id="project1-main-img" src="project Pic/Admin dashboard pic.png" alt="Shipment Tracker"
+              class="rounded-xl object-cover h-44 w-full border-2 border-blue-400 shadow cursor-pointer">
+          </div>
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">Shipment Tracker – Laravel Web Application</h3>
+          <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+            A full-featured logistics web app built with <strong>Laravel</strong> for managing shipments, users, and
+            orders.
+          </p>
+          <ul class="text-sm text-gray-500 list-disc pl-5 mb-4">
+            <li>Admin dashboard & analytics</li>
+            <li>Real-time shipment tracking</li>
+            <li>User & order management</li>
+            <li>Responsive UI</li>
+          </ul>
+          <div class="text-xs text-gray-500 mb-4">
+            <p><strong>Backend:</strong> Laravel</p>
+            <p><strong>Frontend:</strong> Tailwind CSS</p>
+            <p><strong>Database:</strong> MySQL</p>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs">Laravel</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs">Tailwind</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs">MySQL</span>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div
+          class="bg-white p-6 rounded-2xl shadow-lg border border-blue-100 hover:shadow-blue-300 transition duration-300 w-full max-w-sm mx-auto flex-shrink-0">
+          <div class="mb-4 relative">
+            <img id="project2-main-img" src="project Pic/scootVibe pic1.png" alt="ScootVibe"
+              class="rounded-xl object-cover h-44 w-full border-2 border-blue-400 shadow cursor-pointer">
+          </div>
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">ScootVibe – E-commerce Platform</h3>
+          <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+            An online platform dedicated to electric scooters with sleek UI, product carousel, and secure checkout.
+          </p>
+          <ul class="text-sm text-gray-500 list-disc pl-5 mb-4">
+            <li>User-friendly interface</li>
+            <li>Product carousel</li>
+            <li>Product details with ratings</li>
+            <li>Secure checkout</li>
+          </ul>
+          <div class="text-xs text-gray-500 mb-4">
+            <p><strong>Frontend:</strong> React, Redux, Tailwind</p>
+            <p><strong>Routing:</strong> React Router</p>
+            <p><strong>State:</strong> Redux Toolkit</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs">React</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs">Redux</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs">Tailwind</span>
+            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs">JavaScript</span>
+          </div>
+        </div>
+      </div>
+      <!-- Slider Controls -->
+      <div class="flex justify-center mt-10 space-x-6">
+        <button id="projects-prev"
+          class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="projects-next"
+          class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <script>
+      const slider = document.getElementById('projects-slider');
+      const prevBtn = document.getElementById('projects-prev');
+      const nextBtn = document.getElementById('projects-next');
+      let currentIndex = 0;
+      const totalProjects = 2;
+
+      function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalProjects) % totalProjects;
+        updateSlider();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalProjects;
+        updateSlider();
+      });
+    </script>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-8 py-16 bg-gray-800 rounded-lg mx-4 my-8 shadow-2xl border-t-4 border-orange-500">
+    <h2 class="text-3xl font-bold mb-4 text-center text-orange-400 drop-shadow-lg">Let's Design Together</h2>
+    <p class="mb-8 text-gray-300 text-center text-lg">
+      Ready to start your next project? Contact me directly on WhatsApp or by email!
+    </p>
+    <div
+      class="flex flex-col md:flex-row gap-4 items-center justify-center bg-gray-900 p-6 rounded-xl shadow-lg max-w-2xl mx-auto border border-gray-700">
+      <a href="https://wa.me/212635858431" target="_blank" rel="noopener"
+        class="flex items-center bg-gradient-to-r from-green-500 to-green-700 px-8 py-3 rounded-lg font-bold text-white shadow-md hover:scale-105 hover:from-green-600 hover:to-green-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 text-lg">
+        <i class="fab fa-whatsapp mr-3 text-2xl"></i>
+        Contact Me on WhatsApp
+      </a>
+      <a href="mailto:youssefouass16@gmail.com"
+        class="flex items-center bg-gradient-to-r from-orange-500 to-pink-500 px-8 py-3 rounded-lg font-bold text-white shadow-md hover:scale-105 hover:from-orange-600 hover:to-pink-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400 text-lg">
+        <i class="fas fa-envelope mr-3 text-2xl"></i>
+        Email Me
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="px-8 py-10 bg-gradient-to-t from-gray-900 via-gray-800 to-gray-900 text-center rounded-t-2xl shadow-2xl border-t-2 border-orange-500 relative overflow-hidden">
+    <!-- Decorative Gradient Glow -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div
+        class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-96 h-32 bg-gradient-to-r from-orange-400 via-orange-500 to-pink-500 opacity-20 blur-2xl rounded-full">
+      </div>
+    </div>
+    <div class="flex justify-center items-center mb-4 z-10 relative">
+      <span class="text-orange-500 text-3xl font-extrabold mr-2 tracking-tight drop-shadow-lg animate-bounce">YO</span>
+      <span class="text-xl font-bold tracking-wide text-white animate-fade-in-up">Youssef Ouass</span>
+    </div>
+    <style>
+      @keyframes fade-in-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fade-in-up 1s 0.2s both;
+      }
+    </style>
+    <nav class="flex flex-wrap justify-center gap-4 mb-4 z-10 relative">
+      <a href="#home"
+        class="nav-underline relative px-3 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Home
+      </a>
+      <a href="#about"
+        class="nav-underline relative px-3 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        About Me
+      </a>
+      <a href="#services"
+        class="nav-underline relative px-3 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Services
+      </a>
+      <a href="#projects"
+        class="nav-underline relative px-3 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Projects
+      </a>
+      <a href="#contact"
+        class="nav-underline relative px-3 py-1 font-medium text-gray-300 transition-all duration-200 hover:text-orange-400 focus:text-orange-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Contact
+      </a>
+    </nav>
+    <div class="flex justify-center space-x-6 mb-4 z-10 relative">
+      <a href="mailto:youssefouass16@gmail.com"
+        class="group relative text-gray-300 hover:text-orange-400 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-400"
+        aria-label="Email">
+        <span
+          class="absolute -inset-1 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://wa.me/212635858431" target="_blank" rel="noopener"
+        class="group relative text-gray-300 hover:text-green-400 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-400"
+        aria-label="WhatsApp">
+        <span
+          class="absolute -inset-1 rounded-full bg-gradient-to-tr from-green-400 to-green-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://github.com/YoussefOuass" target="_blank" rel="noopener"
+        class="group relative text-gray-300 hover:text-orange-400 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-400"
+        aria-label="GitHub">
+        <span
+          class="absolute -inset-1 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/youssef-ouass-675030199" target="_blank" rel="noopener"
+        class="group relative text-gray-300 hover:text-orange-400 transition-colors duration-200 text-2xl rounded-full p-3 bg-gradient-to-tr from-gray-800 to-gray-900 shadow-md hover:scale-110 focus:outline-none focus:ring-2 focus:ring-orange-400"
+        aria-label="LinkedIn">
+        <span
+          class="absolute -inset-1 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <p class="text-gray-400 text-sm tracking-wide z-10 relative">
+      © 2025 Youssef Ouass. All Rights Reserved.
+    </p>
+    <style>
+      .nav-underline::after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(to right, #fb923c, #ec4899);
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+        border-radius: 2px;
+        margin-top: 2px;
+      }
+
+      .nav-underline:hover::after,
+      .nav-underline:focus::after {
+        transform: scaleX(1);
+      }
+    </style>
+  </footer>
+
+
+  </script>
+</body>
+
+</html>
